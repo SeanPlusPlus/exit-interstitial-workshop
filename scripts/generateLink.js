@@ -5,7 +5,7 @@ const src = 'https://www.disney.com/'
 const dest = 'https://www.starwars.com/'
 
 const url =
-  `https://exit-interstitial-workshop.vercel.app/` +
+  `http://localhost:3000/` +
   `?src=${encodeURIComponent(encryptUrl(src))}` +
   `&dest=${encodeURIComponent(encryptUrl(dest))}`
 
