@@ -1,8 +1,6 @@
 import Links from './Links'
 import { handleSearchParams } from './utils'
 
-type LinkInfo = { url: string; name: string }
-
 export default async function Home({
   searchParams,
 }: {
