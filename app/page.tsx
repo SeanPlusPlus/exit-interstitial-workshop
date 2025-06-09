@@ -7,7 +7,7 @@ export default async function Home({
   searchParams,
 }: {
   // Next 15+: `searchParams` is now a Promise
-  searchParams: Promise<Record<string, string | string[] | undefined>>
+  searchParams: Promise<Record<string, string | undefined>>
 }) {
   // Wait for the params once (or wrap the whole thing in <Suspense>)
   const params = await searchParams
