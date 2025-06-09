@@ -1,4 +1,4 @@
-export default function Links({ src, dest }: { src: string; dest: string }) {
+export default function Links({ src, dest }: { src: string | null; dest: string | null }) {
   if (!src || !dest) {
     return <p className="text-red-500">Invalid parameters provided.</p>
   }
