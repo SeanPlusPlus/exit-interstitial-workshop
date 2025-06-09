@@ -7,6 +7,8 @@ export const handleSearchParams = (src: string | undefined, dest: string | undef
   console.log('src param decrypted:', decryptUrl(src || ''))
   console.log('dest param decrypted:', decryptUrl(dest || ''))
 
-  // TODO: Add logic to handle search params
-  return null
+  return {
+    src: decryptUrl(src || ''),
+    dest: decryptUrl(dest || ''),
+  }
 }

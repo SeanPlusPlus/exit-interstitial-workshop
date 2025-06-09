@@ -17,26 +17,13 @@ export default async function Home({
   const destRaw = params.dest
 
   // Verify params valid
-  const validParams = handleSearchParams(srcRaw, destRaw)
-
-  // Decide what shape you want to accept.
-  // Here we expect simple URLs; names stay the same.
-  const src: LinkInfo = {
-    url: typeof srcRaw === 'string' ? decodeURIComponent(srcRaw) : 'https://www.disney.com/',
-    name: 'Return to Disney',
-  }
-
-  const dest: LinkInfo = {
-    url: typeof destRaw === 'string' ? decodeURIComponent(destRaw) : 'https://www.starwars.com/',
-    name: 'Go to Star Wars',
-  }
+  const { src, dest } = handleSearchParams(srcRaw, destRaw)
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <h1 className="text-4xl font-bold text-center sm:text-left">Exit Interstitial Workshop</h1>
-        {validParams && <Links src={src} dest={dest} />}
-        {!validParams && <p className="text-red-500">Invalid parameters provided.</p>}
+        <Links src={src} dest={dest} />
       </main>
     </div>
   )
