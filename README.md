@@ -35,3 +35,6 @@ npm run dev
 ```
 
 Now you should be able to take the URL generated from the `generateLink.js` script and paste that into your browser
+
+<img width="1565" alt="image" src="https://github.com/user-attachments/assets/9bbdff78-d059-46d9-bb62-b3cbb5be189c" />
+
